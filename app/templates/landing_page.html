@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>welcome to Laikipia Selbuy</title>
+    <style>
+    body{
+    height:100vh;
+    margin:0px;
+    }
+    .container{
+    display:flex;
+    }
+    .left{
+    position:relative;
+    margin:0px;
+    float:left;
+    height:80vh;
+    border:none;
+    width:50%;
+    font-family: Ubuntu-Regular, sans-serif;
+    }
+    .left .left-content{
+    padding-top:30vh;
+    text-align:center;
+    }
+    .left .left1-content{
+    }
+    .top{
+    height:20vh;
+    background: #d41872;
+    background: -webkit-linear-gradient(left, #a445b2, #d41872, #fa4299);
+    background: -o-linear-gradient(left, #a445b2, #d41872, #fa4299);
+    background: -moz-linear-gradient(left, #a445b2, #d41872, #fa4299);
+    background: linear-gradient(left, #a445b2, #d41872, #fa4299);
+    border-radius: 10px;
+    color: #333333;
+    border-color:black;
+    }
+    .top ul{
+    padding-top:20px;
+    }
+    </style>
+</head>
+<body>
+<div class="top">
+    <UL>
+        <li><h1>SELBUY</h1></li>
+    </UL>
+</div>
+<div class="container">
+    <div class="left">
+        <div class="left1-content">
+            <img src="{{url_for('static', filename='img.png')}}" style="width:100%;height:80vh;" >
+        </div>
+    </div>
+    <div class="left">
+        <div CLASS="left-content">
+            <p>Join Laikipia University SELLBUY online shop and enjoy variety of goods at a comrade price<br>
+            with instant drop at your doorstep by just a click of button. Also, you sell your product by just<br>
+            a posting it on website  </p>
+            <button ><a href="/login">JOIN NOW</a></button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
