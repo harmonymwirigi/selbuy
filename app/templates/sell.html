@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>SELL INTO LAIKIPIA SELBUY</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/css/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/css/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/css/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/css/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/css/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="static/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+			<div class="wrap-login100 p-t-30 p-b-50">
+				<span class="login100-form-title p-b-41">
+					SELL
+				</span>
+				<form class="login100-form validate-form p-b-33 p-t-5" method="post" action="">
+					{{form.hidden_tag()}}
+
+					<div class="wrap-input100 validate-input">
+						{{form.name(class="input100",placeholder= "Goods Name") }}
+						{% if form.name.errors %}
+						<div>
+							{% for error in form.name.errors %}
+							<p style="padding-left: 40px;color:red;">{{ error }}</p>
+							{% endfor %}
+						</div>
+						{% endif %}
+						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
+					</div>
+					<div class="wrap-input100 validate-input">
+						{{form.description(class="input100",placeholder= "Description") }}
+						{% if form.description.errors %}
+						<div>
+							{% for error in form.description.errors %}
+							<p style="padding-left: 40px;color:red;">{{ error }}</p>
+							{% endfor %}
+						</div>
+						{% endif %}
+						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
+					</div>
+					<div class="wrap-input100 validate-input">
+						{{form.quantity(class="input100",placeholder= "Quantity") }}
+						{% if form.quantity.errors %}
+						<div>
+							{% for error in form.quantity.errors %}
+							<p style="padding-left: 40px;color:red;">{{ error }}</p>
+							{% endfor %}
+						</div>
+						{% endif %}
+						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
+					</div>
+					<div class="wrap-input100 validate-input">
+						{{form.picture(class="input100",placeholder= "Picture") }}
+						{% if form.picture.errors %}
+						<div>
+							{% for error in form.picture.errors %}
+							<P style="padding-left: 40px;color:red;">{{ error }}</P>
+							{% endfor %}
+						</div>
+						{% endif %}
+						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
+					</div>
+
+					<div class="container-login100-form-btn m-t-32">
+						<button class="login100-form-btn">
+							{{form.submit()}}
+						</button>
+					</div>
+					<p style="text-align:center; margin-top:10px;;"><button style="color:blue">Already have an account. <a href="/login">Login?</a></button></p>
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>
